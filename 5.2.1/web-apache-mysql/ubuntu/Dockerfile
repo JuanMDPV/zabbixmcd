@@ -101,6 +101,9 @@ RUN set -eux && \
     chown --quiet -R zabbix:root /usr/share/zabbix/include/defines.inc.php && \
     chgrp -R 0 /usr/share/zabbix/include/defines.inc.php && \
     chmod -R g=u /usr/share/zabbix/include/defines.inc.php && \
+    chown --quiet -R zabbix:root /usr/share/zabbix/assets && \
+    chgrp -R 0 /usr/share/zabbix/assets && \
+    chmod -R g=u /usr/share/zabbix/assets && \
     DEBIAN_FRONTEND=noninteractive apt-get -y purge \
             gettext \
             git && \
